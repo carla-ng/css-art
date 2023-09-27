@@ -1,0 +1,22 @@
+
+// Transform list to box-shadow art
+@function pixelart($drawing-list, $shadow-count, $colors) {
+    $shadows: ();
+    $row: 0;
+    $col: 1;
+    
+    @for $i from 1 through length($drawing-list) {
+        @if( nth($drawing-list,$i) > 0 ) {
+            $shadows: append($shadows, ($col * 1px) ($row * 1px) 0 map-get($colors,nth($drawing-list,$i)), 'comma');
+        }
+        
+        @if($i % $shadow-count == 0) {
+            $row: $row+1;
+            $col: 0;
+        }
+        
+        $col: $col + 1;
+    }
+    
+    @return $shadows;
+}

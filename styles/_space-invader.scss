@@ -1,0 +1,45 @@
+@import 'helper.scss';
+
+
+// Variables
+$invader-color: #fff;
+$invader-grid: 11;
+
+$invader-colors: (
+	1: $invader-color
+);
+
+
+// Design
+$invader: 0,0,1,0,0,0,0,0,1,0,0,
+          0,0,0,1,0,0,0,1,0,0,0,
+          0,0,1,1,1,1,1,1,1,0,0,
+          0,1,1,0,1,1,1,0,1,1,0,
+          1,1,1,1,1,1,1,1,1,1,1,
+          1,0,1,1,1,1,1,1,1,0,1,
+          1,0,1,0,0,0,0,0,1,0,1,
+          0,0,0,1,1,0,1,1,0,0,0;
+
+
+// Styles
+.space-invader_container {
+    //width: 200px;
+
+    .space-invader {
+        width: 1px;
+        height: 1px;
+        margin: 100px 50px;
+        //position: relative;
+        
+        scale: 20;
+        
+        animation: move .5s linear alternate infinite;
+        box-shadow: pixelart($invader, $invader-grid, $invader-colors);
+    }
+}
+
+
+// Animations
+@keyframes move {
+    100% { translate: 50px 0; }
+}
