@@ -15,3 +15,4 @@ https://carla-ng.github.io/css-art/
 
 ## :clap: Acknowledgments
 * [Joan Leon](https://joanleon.dev/)
+* [Red Stapler](https://redstapler.co/)
