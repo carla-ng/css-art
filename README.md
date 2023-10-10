@@ -9,7 +9,7 @@ https://carla-ng.github.io/css-art/
 <br/>
 
 ## :hammer_and_pick: Built With
-* SCSS
+* CSS/SCSS
 
 <br/>
 
